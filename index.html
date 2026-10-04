@@ -8,11 +8,41 @@
 </head>
 <body>
 <div id="app">
-    <header>
+    <header class="header">
+        <div class="header__brand">
+            <button class="burger" type="button" aria-label="Открыть меню">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+            <a class="header__title">Заголовок</a>
+        </div>
+
+        <div class="header__options">
+            <div class="header__icon"></div>
+            <div class="header__icon"></div>
+            <div class="header__icon"></div>
+        </div>
     </header>
 
     <main>
-        <aside>
+        <aside class="sidebar">
+            <nav class="sidebar__nav">
+                <ul class="sidebar__list">
+                    <li class="sidebar__item">
+                        <a href="#profile" class="sidebar__link">Профиль</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#messages" class="sidebar__link">Сообщения</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#settings" class="sidebar__link">Настройки</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#help" class="sidebar__link">Помощь</a>
+                    </li>
+                </ul>
+            </nav>
         </aside>
 
         <section>
