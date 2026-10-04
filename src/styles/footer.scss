@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 80px;
+  padding: 15px;
+
+  background-color: #95d9ff;
+
+  &__text {
+    max-width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    &__text {
+      max-width: 1200px;
+    }
+  }
+}
