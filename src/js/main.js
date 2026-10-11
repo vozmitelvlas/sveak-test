@@ -6,6 +6,10 @@ const burger = document.querySelector('.burger');
 const sidebar = document.querySelector('.sidebar');
 
 burger.addEventListener('click', () => {
-    burger.classList.toggle('is-active');
-    sidebar.classList.toggle('is-open');
+    // burger.classList.toggle('is-active');
+    // sidebar.classList.toggle('is-open');
+
+    // document.body.classList.toggle('menu-open');
 });
+
+
