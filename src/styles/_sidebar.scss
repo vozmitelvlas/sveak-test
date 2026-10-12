@@ -22,7 +22,7 @@
     }
 
     &__item {
-        width: 80%;
+        width: 100%;
         background-color: #b671ff;
         padding: 10px 15px;
         border-radius: 10px;
@@ -33,11 +33,11 @@
         width: 300px;
     }
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
         background-color: inherit;
         left: 0;
         top: 0;
-        width: 350px;
+        width: 400px;
         border-right: 2px solid #b0b2b9;
         transform: translateX(0%);
     }
