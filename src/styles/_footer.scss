@@ -1,0 +1,19 @@
+.footer {
+    margin-top: 0;
+    min-height: 80px;
+    background-color: #95d9ff;
+    padding: 15px;
+    z-index: 2;
+
+    @media (min-width: 640px) {
+        margin-top: auto;
+
+        &__text {
+            max-width: 80%;
+        }
+    }
+    @media (min-width: 1024px) {
+        background-color: inherit;
+        border-top: 2px solid #b0b2b9;
+    }
+}

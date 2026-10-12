@@ -1,9 +1,10 @@
 .sidebar {
     position: fixed;
+    top: 0;
     left: 0;
-    right: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #c88fff;
-    height: 100%;
     padding: 60px 20px 20px;
     transition: transform 0.3s;
     z-index: 3;
@@ -34,11 +35,14 @@
     }
 
     @media (min-width: 1024px) {
+        position: static;
+        height: auto;
+
         background-color: inherit;
-        left: 0;
-        top: 0;
         width: 400px;
         border-right: 2px solid #b0b2b9;
-        transform: translateX(0%);
+
+        transform: none;
+        transition: none;
     }
 }

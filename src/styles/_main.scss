@@ -1,5 +1,6 @@
 .main {
     padding: 70px 20px;
+    flex: 1;
 
     &__list {
         display: grid;
@@ -56,7 +57,7 @@
     }
 
     @media (min-width: 1024px) {
-        padding-left: 420px;
+        //padding-left: 420px;
     }
 }
 
