@@ -76,6 +76,7 @@ table {
 
 .layout {
   display: flex;
+  align-items: stretch;
   flex: 1;
 }
 
@@ -111,12 +112,6 @@ table {
 }
 @media (min-width: 1024px) {
   .header {
-    background-color: inherit;
-  }
-  .header__container {
-    justify-content: flex-end;
-  }
-  .header__brand {
     display: none;
   }
 }
@@ -128,20 +123,23 @@ table {
   bottom: 0;
   width: 100%;
   background-color: #c88fff;
-  padding: 60px 20px 20px;
   transition: transform 0.3s;
   z-index: 3;
   transform: translateX(-100%);
-}
-.sidebar__nav {
-  width: 100%;
-  height: 100%;
+  height: 100vh;
+  padding: 90px 0 10px 0;
 }
 .sidebar__list {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  padding: 0 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
 }
 .sidebar__item {
   width: 100%;
@@ -157,10 +155,10 @@ table {
 }
 @media (min-width: 1024px) {
   .sidebar {
-    position: static;
-    height: auto;
-    background-color: inherit;
+    position: sticky;
+    align-self: flex-start;
     width: 400px;
+    background-color: inherit;
     border-right: 2px solid #b0b2b9;
     transform: none;
     transition: none;
@@ -171,11 +169,6 @@ table {
   display: block;
   height: 20px;
   width: 25px;
-}
-@media (min-width: 1023px) {
-  .header__burger label {
-    display: none;
-  }
 }
 
 #burger {
@@ -228,6 +221,11 @@ table {
   transform: translateX(0);
 }
 
+@media (min-width: 1024px) {
+  #burger {
+    display: none;
+  }
+}
 .footer {
   margin-top: 0;
   min-height: 80px;
@@ -247,12 +245,18 @@ table {
   .footer {
     background-color: inherit;
     border-top: 2px solid #b0b2b9;
+    height: 80px;
   }
 }
 
 .main {
-  padding: 70px 20px;
   flex: 1;
+  padding: 70px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.main__options {
+  display: none;
 }
 .main__list {
   display: grid;
@@ -300,6 +304,23 @@ table {
     display: none;
   }
 }
+@media (min-width: 1024px) {
+  .main {
+    padding: 0 20px 20px;
+  }
+  .main__list {
+    padding-top: 20px;
+  }
+  .main__options {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 50px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
 .card {
   width: 100%;
   height: 130px;
@@ -309,7 +330,6 @@ table {
   display: flex;
   flex-direction: column;
   border: 1px solid #d5d5d5;
-  overflow: hidden;
 }
 .card__title {
   margin: 0;

@@ -32,19 +32,17 @@
         background-color: burlywood;
     }
 
-    @media (min-width: 640px) {
-
-    }
-
     @media (min-width: 1024px) {
-        background-color: inherit;
+        display: none;
 
-        &__container {
-            justify-content: flex-end;
-        }
-
-        &__brand {
-            display: none;
-        }
+        //background-color: inherit;
+        //
+        //&__container {
+        //    justify-content: flex-end;
+        //}
+        //
+        //&__brand {
+        //    display: none;
+        //}
     }
 }
